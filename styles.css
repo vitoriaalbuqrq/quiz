@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('bgWorld.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+button{
+    font-family: 'Poppins', sans-serif;
+}
+
+.quiz-container{
+    position: relative;
+    background-color: white;
+    height: 320px;
+    width: 350px;
+    margin: 100px auto;
+    padding: 50px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 8px;
+}
+
+.quiz-container h1 {
+    text-align: center;
+    color: rgb(31, 31, 31);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background-color: #ccc;
+}
+
+.progress-bar div {
+    height: 100%;
+    border-radius: 8px;
+    background-color: #49559a;
+}
+
+.assessment{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.assessment #score,
+.assessment #wrong {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: white;
+    width: 45px;
+    height: 30px;
+    border-radius: 8px;
+    text-align: center;
+    padding-top: 5px;
+}
+.assessment #wrong {
+    background-color: #d53032;
+}
+
+.assessment #p-score{
+    padding-right: 35px;
+    color: green;
+
+}
+.assessment #p-wrong{
+    padding-left: 35px;
+    color: #d53032;
+}
+
+.quiz-container #question{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 500;
+}
+
+#choices{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#choices .choice{
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+}
+#choices .choice:hover{
+    background-color: #aab0fe;
+}
+
+#choices .choice.selected {
+    background-color: #aab0fe;
+    cursor: default;
+    pointer-events: none;
+}
+
+.feedback{
+    color: #49559a;
+    font-size: 16px;
+    text-align: center;
+}
+
+#next{
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    border: none;
+    margin-right: 10px;
+    margin-top: 30px;
+    padding: 5px 15px;
+    border-radius: 8px;
+    background-color: #49559a;
+    color: white;
+}
